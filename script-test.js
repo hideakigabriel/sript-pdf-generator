@@ -8,7 +8,9 @@ function convertDataFormPDF(){
 
   const doc = new jsPDF()
 
-  doc.setFontSize(11)
+  // First Page
+
+  doc.setFontSize(8)
   doc.text("@hideaki.design.software", 150, 10)
 
   doc.setFontSize(12)
@@ -56,11 +58,33 @@ function convertDataFormPDF(){
   doc.text("proposta estipulamos um prazo máximo de 28 dias úteis para a entrega preliminar das", 20, 235)
   doc.text("perspectivas – contados a partir da entrega do material e pagamento", 20, 240)
 
+  // Second Page
+
+  doc.addPage("a4")
+
+  doc.setFontSize(8)
+  doc.text("@hideaki.design.software", 150, 10)
+
+  doc.setFontSize(12)
+  doc.text("Valores", 20, 40)
+
+  // Third Page
+
+  doc.addPage("a4")
+
+  doc.setFontSize(8)
+  doc.text("@hideaki.design.software", 150, 10)
+
+  doc.setFontSize(12)
+  doc.text("Termos e Condições", 20, 40)
+
+  doc.text("1. O orçamento é válido para as informações presentes no momento da contratação,", 20, 50)
+  doc.text("Informações adicionais são cobradas à parte e implicam em alteração de cronograma.", 20, 55)
+
+  // Save Document
+
   doc.autoPrint({variant: 'non-conform'})
   doc.output('dataurlnewwindow')
-  doc.save("my-document.pdf")
- 
+  doc.save(`Modelo de Prestação de Serviços ${inputBusinessName} - Hideaki Design.pdf`)
 
-
-  
 }
