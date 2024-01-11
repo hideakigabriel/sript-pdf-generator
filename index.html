@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/splash-screen.css" />
+    <link rel="stylesheet" href="styles/table_style.css" />
+    <link rel="stylesheet" href="styles/table_style.css" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/media-query.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@800&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/script-test.js" defer></script>
+    <script src="js/splash-screen.js" defer></script>
+    <title>Script Budget PDF Creator | Hideaki Design & Software</title>
+  </head>
+  <body>
+    <div class="splash-screen">
+      <img src="./assets/logo.png" alt="" />
+    </div>
+    <div class="container">
+      <header>
+        <img class="img-logo" src="./assets/logo.png" alt="Hideaki Logo" />
+      </header>
+      <section>
+        <main>
+          <div class="left-container">
+            <h1>
+              Budget PDF <br />
+              <span>Creator</span>
+            </h1>
+            <p>Fill the information to generate the budget</p>
+            <form id="budgetFormData" method="post">
+              <input
+                type="text"
+                maxlength="30"
+                placeholder="Name"
+                id="inputName"
+              />
+              <input
+                type="text"
+                maxlength="30"
+                placeholder="Business name"
+                id="inputBusinessName"
+              />
+              <input
+                type="tel"
+                placeholder="Phone number"
+                name=""
+                id="inputTel"
+              />
+              <input
+                type="email"
+                maxlength="50"
+                placeholder="E-mail"
+                name=""
+                id="inputEmail"
+              />
+            </form>
+            <input
+              class="form_btn"
+              type="button"
+              value="GENERATE BUDGET"
+              onclick="convertDataFormPDF()"
+            />
+          </div>
+        </main>
+
+        <div class="hero-container">
+          <img
+            class="img-laptop"
+            src="./assets/laptop.png"
+            alt="Laptop Widget"
+          />
+          <div>
+            <ul class="social-media-container">
+              <li>
+                <a
+                  href="https://www.behance.net/hideakidesign"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><img src="./assets/behance-icon.svg" alt=""
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/hideakigabriel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><img src="./assets/github-icon.svg" alt=""
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/gabriel-hideaki/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><img src="./assets/linkedin-icon.svg" alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div style="display: none" class="html_to_pdf">
+      <table style="font-size: 12px" class="my_table" id="html_to_pdf">
+        <tr>
+          <th>Nome/Descição</th>
+          <th>Quantidade</th>
+          <th>Valor Unid.</th>
+        </tr>
+        <tr>
+          <td>Logotipo</td>
+          <td>1</td>
+          <td>R$ 279,99</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Subtotal</td>
+          <td></td>
+          <td>279,99</td>
+        </tr>
+        <tr>
+          <td>Desconto</td>
+          <td></td>
+          <td id="discount-price">- 00,00</td>
+        </tr>
+        <tr>
+          <td>Total</td>
+          <td></td>
+          <td>279,99</td>
+        </tr>
+      </table>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.js"></script>
+  </body>
+</html>
