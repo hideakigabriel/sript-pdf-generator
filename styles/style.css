@@ -1,0 +1,131 @@
+/* Mobile First Version */
+
+:root {
+  --gradient-template: -webkit-linear-gradient(135deg, rgb(34, 104, 209), rgb(145, 29, 217));
+  --primary-color: #1E153D;
+  --secoundary-color: rgb(145, 29, 217);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+header {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.img-logo {
+  height: 1.2rem;
+}
+
+.img-laptop {
+  height: 15rem;
+  transition: 500ms;
+}
+
+.img-laptop:hover {
+  scale: 1.1;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.social-media-container {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  padding-right: 2rem;
+  transition: all ease-in-out 800ms;
+}
+
+.social-media-container img:hover {
+  scale: 1.1;
+}
+
+main {
+  margin: 1rem 1.5rem auto;
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.9rem;
+  margin-top: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-family: Archivo;
+}
+
+span {
+  background: var(--gradient-template);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+form input {
+  color: rgba(255, 255, 255, 0.8);
+  padding: 1.3rem 1.5rem; 
+  border-radius: 60px;
+  background-color: #1E153D;
+  border: double 4px transparent;
+  background-image: linear-gradient(var(--primary-color), var(--primary-color)), 
+                    var(--gradient-template);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+::placeholder { /* Edge 12-18 */
+  color: rgba(255, 255, 255, 1);
+  font-family: Poppins, sans-serif;
+}
+
+input:focus {
+  color: rgba(255, 255, 255, 1);
+  border-color: var(--secoundary-color);
+  outline: var(--secoundary-color);
+  background-image: linear-gradient(var(--primary-color), var(--primary-color)), 
+                    linear-gradient(var(--secoundary-color), var(--secoundary-color));
+}
+
+.form_btn {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 1.3rem 1.5rem; 
+  border-radius: 60px;
+  background-image: var(--gradient-template), 
+                    var(--gradient-template);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.form_btn:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px rgba(145, 92, 182, .4);;
+}

@@ -1,0 +1,19 @@
+.splash-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--secoundary-color) !important;
+  z-index: 1;
+  transition: all ease-in-out 900ms;
+}
+
+.splash-screen img {
+  height: 2rem;
+}
+
+.hidden {
+  transition: 1s;
+  display: none;
+}

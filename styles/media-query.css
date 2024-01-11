@@ -1,0 +1,211 @@
+/* Reponsive Design */
+
+/* Typical Devices Breakpoints 
+--------------------------------------------------------------------
+--Extra small devices (phones, 600px and down)--
+@media only screen and (max-width: 600px) {...}
+
+--Small devices (portrait tablets and large phones, 600px and up)--
+@media only screen and (min-width: 600px) {...}
+
+--Medium devices (landscape tablets, 768px and up)--
+@media only screen and (min-width: 768px) {...}
+
+--Large devices (laptops/desktops, 992px and up)--
+@media only screen and (min-width: 992px) {...}
+
+--Extra large devices (large laptops and desktops, 1200px and up)--
+@media only screen and (min-width: 1200px) {...} 
+--------------------------------------------------------------------
+*/
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  /* --Medium devices (landscape tablets, 768px and up)--*/
+  .img-logo {
+    height: 2rem;
+  }
+
+  .img-laptop {
+    height: 22rem;
+    transition: 500ms;
+  }
+
+  .hero-container {
+    margin-top: 3rem;
+  }
+
+  main {
+    margin: 2rem 4rem auto;
+    padding: 0 5rem;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    font-family: Archivo;
+  }
+
+  p {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+  form {
+    gap: 1.6rem;
+  }
+
+  form input {
+    font-size: 1rem;
+  }
+
+  .form_btn {
+    font-size: 1rem;
+    padding: 1.3rem 1.5rem;
+    width: 50%;
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  /* Desktop */
+  body {
+    background: url(../assets/background-wallpaper.jpg);
+    background-position: cover;
+  }
+
+  header {
+    padding: 0rem;
+    justify-content: flex-start;
+    margin: 0 8rem auto;
+  }
+
+  .img-logo {
+    height: 1.8rem;
+  }
+
+  .img-laptop {
+    height: 20rem;
+    transition: 500ms;
+  }
+
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 3rem;
+  }
+
+  .social-media-container {
+    margin-bottom: 0;
+  }
+
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 5rem auto;
+    background-color: rgb(17, 7, 50, 0.6);
+    justify-content: center;
+    padding: 5rem 2rem;
+    border-radius: 3rem;
+  }
+
+  section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  form {
+    gap: 0.9rem;
+  }
+
+  form input {
+    padding: 1rem 1rem; 
+    border-radius: 60px;
+    border: double 3px transparent;
+    background-image: linear-gradient(#210C54, #210C54), 
+                      var(--gradient-template);
+  }
+
+  .form_btn {
+    padding: 1rem;
+    margin-top: -12px; 
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* --Extra large devices (large laptops and desktops, 1200px and up)-- */
+
+  body {
+    background: url(../assets/background-wallpaper.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  header {
+    padding: 0rem;
+    justify-content: flex-start;
+    margin: 0 8rem auto;
+  }
+
+  .img-logo {
+    height: 1.8rem;
+  }
+
+  .img-laptop {
+    height: 28rem;
+    transition: 500ms;
+  }
+
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 3rem;
+  }
+
+  .social-media-container {
+    margin-bottom: 0;
+  }
+
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 6rem 21.5rem;
+    background-color: rgb(17, 7, 50, 0.6);
+    justify-content: center;
+    padding: 5rem 3rem;
+    border-radius: 3rem;
+  }
+
+  section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6rem;
+    justify-content: center;
+  }
+
+  form {
+    gap: 0.9rem;
+  }
+
+  form input {
+    padding: 1rem 1rem; 
+    border-radius: 60px;
+    border: double 3px transparent;
+    background-image: linear-gradient(#210C54, #210C54), 
+                      var(--gradient-template);
+  }
+
+  .form_btn {
+    padding: 1rem;
+    margin-top: -12px; 
+  }
+}
