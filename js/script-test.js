@@ -25,7 +25,6 @@ function convertDataFormPDF() {
 
   console.log(firstLetterBusinessName);
 
-
   // First Page (Página de proposta)
 
   doc.setFontSize(8);
@@ -48,8 +47,10 @@ function convertDataFormPDF() {
   doc.text("++55 11 98617-1486", 20, 105);
   doc.text("hideaki.gabrieldesign@gmail.com", 20, 110);
 
+  doc.setFontType("bold");
   doc.text("Descrição do Serviço", 20, 120);
 
+  doc.setFontType("normal");
   doc.text(
     "Geração de logotipos contendo fontes, cores e acabamentos.",
     20,
@@ -70,8 +71,10 @@ function convertDataFormPDF() {
   );
   doc.text("cores, texturas, etc.", 20, 160);
 
+  doc.setFontType("bold");
   doc.text("Forma de Entrega", 20, 170);
 
+  doc.setFontType("normal");
   doc.text(
     ". Via internet: E-mail. Ao contratar o serviço, o cliente poderá acompanhar todas",
     20,
@@ -94,8 +97,10 @@ function convertDataFormPDF() {
   );
   doc.text("Havendo necessidade de outras resoluções, consulte-nos.", 20, 200);
 
+  doc.setFontType("bold");
   doc.text("Prazos", 20, 210);
 
+  doc.setFontType("normal");
   doc.text(
     "O trabalho terá início logo após fechamento do contrato, entrega de todo material para",
     20,
@@ -129,12 +134,34 @@ function convertDataFormPDF() {
   doc.setFontSize(8);
   doc.text("@hideaki.design.software", 150, 10);
 
+  doc.setFontType("bold");
   doc.setFontSize(12);
   doc.text("Valores", 20, 40);
+
+  doc.setFontType("normal");
 
   const HTMLelement = $(".html_to_pdf").html();
 
   doc.fromHTML(HTMLelement, 20, 45, {});
+
+  doc.setFontType("bold");
+  doc.setFontSize(12);
+  doc.text("Formas de Pagamento", 20, 205);
+
+  doc.setFontType("normal");
+  doc.setFontSize(10);
+  doc.text("- Pix (desconto de 10% à vista via PIX)", 20, 215);
+  doc.text("- TED", 20, 220);
+  doc.text(
+    "- Cartão de crédito/débito (Parcelamos em até 10 vezes sem juros)",
+    20,
+    225
+  );
+  doc.text(
+    "- Dependendo da forma de pagamento escolhida, haverá taxas inclusas.",
+    20,
+    235
+  );
 
   // Third Page (Página de Termos e Condições)
 
@@ -143,9 +170,11 @@ function convertDataFormPDF() {
   doc.setFontSize(8);
   doc.text("@hideaki.design.software", 150, 10);
 
+  doc.setFontType("bold");
   doc.setFontSize(12);
   doc.text("Termos e Condições", 20, 40);
 
+  doc.setFontType("normal");
   doc.text(
     "1. O orçamento é válido para as informações presentes no momento da contratação,",
     20,
@@ -250,9 +279,11 @@ function convertDataFormPDF() {
   doc.setFontSize(8);
   doc.text("@hideaki.design.software", 150, 10);
 
+  doc.setFontType("bold");
   doc.setFontSize(12);
   doc.text("Validade da Proposta", 20, 40);
 
+  doc.setFontType("normal");
   doc.text(
     "Os valores e prazos desta propsta têm validade de 15 dias (quinze) corridos.",
     20,
@@ -281,14 +312,14 @@ function convertDataFormPDF() {
   ) {
     console.log("Esse campo não pode estar vazio");
     alert(
-    "❌ Esse campo não pode estar vazio! Certifique-se de preencher todos os campos."
+      "❌ Você deixou um dos campos vazios! Certifique-se de preencher todo o formulário."
     );
     return false;
   } else {
     doc.autoPrint({ variant: "non-conform" });
     doc.output("dataurlnewwindow");
     doc.save(
-      `Modelo de Prestação de Serviços ${inputBusinessName} - Hideaki Design.pdf`
+      `Modelo de Prestação de Serviços ${inputBusinessName} - Hideaki Design e Software.pdf`
     );
 
     console.log("Sucesso!");
