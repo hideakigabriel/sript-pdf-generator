@@ -29,6 +29,9 @@ function convertDataFormPDF() {
 
   doc.setFontSize(8);
 
+  img.src = "assets/logo-test.png";
+  doc.addImage(img, "png", 20, 10, 30, 7);
+
   doc.text("@hideaki.design.software", 150, 10);
 
   doc.setFontSize(12);
@@ -132,6 +135,7 @@ function convertDataFormPDF() {
   doc.addPage("a4");
 
   doc.setFontSize(8);
+
   doc.text("@hideaki.design.software", 150, 10);
 
   doc.setFontType("bold");
@@ -316,7 +320,6 @@ function convertDataFormPDF() {
     );
     return false;
   } else {
-    doc.autoPrint({ variant: "non-conform" });
     doc.output("dataurlnewwindow");
     doc.save(
       `Modelo de Prestação de Serviços ${inputBusinessName} - Hideaki Design e Software.pdf`
